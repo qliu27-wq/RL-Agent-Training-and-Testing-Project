@@ -1,0 +1,49 @@
+A reinforcement learning project based on Stable-Baselines3 and Gymnasium for training and testing DQN agents in the CartPole environment.
+Project Structure
+RL1/
+├── models/                 # Model storage directory
+│   └── dqn_cartpole.zip   # Trained model file
+├── train.py               # Training script
+├── test.py                # Testing script
+└── README.md             # Project documentation
+Features
+Training Script (train.py)
+Trains a DQN agent on the CartPole-v1 environment
+Trains for 1,000,000 steps with progress bar display
+Automatically saves the trained model to a specified directory
+Testing Script (test.py)
+Loads and tests the trained model with visualization
+Observes agent performance in a graphical interface
+Runs for up to 5000 steps or until task failure
+Requirements
+Required Dependencies
+pip install gymnasium
+pip install stable-baselines3
+Optional Dependencies (for rendering)
+pip install pygame  # For graphical rendering
+Usage
+1. Train the Agent
+python train.py
+After training, the model will be saved to: C:\Users\21753\Desktop\RL1\models\dqn_cartpole.zip
+2. Test the Agent
+python test.py
+Note: Ensure the model file exists before running the test script
+Configuration
+Path Configuration
+Modify the following path in the code to match your system:
+base_dir = "C:\\Users\\21753\\Desktop\\RL1"  # Change to your project path
+Training Parameters
+Algorithm: DQN
+Training steps: 1,000,000
+Environment: CartPole-v1
+Policy network: MLP (Multi-Layer Perceptron)
+Important Notes
+Path Requirements: Ensure the project path exists and has write permissions
+Model Dependency: The test script requires running the training script first to generate the model file
+Rendering Support: Testing requires graphical interface support for visualization
+Hardware Requirements: Training may take considerable time; GPU acceleration is recommended
+Troubleshooting
+Common Issues
+Model file not found error: Run train.pyfirst to train the model
+Rendering errors: Install pygame or check graphics drivers
+Path errors: Modify base_dirto the correct project path
